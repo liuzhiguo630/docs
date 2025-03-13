@@ -3,7 +3,7 @@
   "theme": "linden",
   "name": "API 文档",
   "colors": {
-    
+    "primary": "#ff5522"
   },
   "favicon": "/favicon.svg",
   "navigation": {
@@ -64,12 +64,7 @@
         "label": "Support",
         "href": "mailto:hi@mintlify.com"
       }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
-    }
+    ]
   },
   "footer": {
     "socials": {
