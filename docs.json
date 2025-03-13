@@ -3,7 +3,9 @@
   "theme": "linden",
   "name": "API 文档",
   "colors": {
-    "primary": "#ff5522"
+    "primary": "#ff5522",
+    "light": "#ff5522",
+    "dard": "#ff5522"
   },
   "favicon": "/favicon.svg",
   "navigation": {
