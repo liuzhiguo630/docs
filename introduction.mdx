@@ -5,22 +5,59 @@ description: "Liaobots 致力于为开发者提供快速、便捷、便宜的 AP
 
 <img alt="Hero Light" classname="block dark:hidden" src="/images/hero-light.png" />
 
-<img alt="Hero Dark" classname="hidden dark:block" src="/images/hero-dark.png" />
-
 ## 如何接入
 
 我们支持各类模型的 API 调用，无需适配格式，使用 OpenAI API 格式，仅需修改 base\_url 和 api\_key。api\_key 使用主站登录码，随用随充。
 
 <CardGroup cols={2}>
-  <Card title="OpenAI Chat Completions" icon="pen-to-square" href="https://platform.openai.com/docs/api-reference/chat/create">
+  <Card title="Chat Completions" icon="pen-to-square" href="https://platform.openai.com/docs/api-reference/chat/create">
     OpenAI 官方 API 文档
   </Card>
 </CardGroup>
 
 ## 模型列表
 
-| 系列    | 模型         | 窗口上下文 | 积分价格                                  | 折扣比例 | 官方价格                                    |
-| ----- | ---------- | ----- | :------------------------------------ | ---- | --------------------------------------- |
-| o1/o3 | o1-preview | 128K  | 请求 0.045/1k tokens, 响应 0.18/1k tokens | 40%  | 请求: $0.015/1k tokens, 响应 0.06/1k tokens |
-|       |            |       |                                       |      |                                         |
-|       |            |       |                                       |      |                                         |
+# AI 模型比较
+
+| 系列        | 模型名                           | 上下文   | 输入价格     | 输出价格     | 折扣比例 | 官方输入      | 官方输出     |
+| --------- | ----------------------------- | ----- | -------- | -------- | ---- | --------- | -------- |
+| Anthropic | Claude-3.7-Sonnet             | 200k  | ¥0.0165  | ¥0.0825  | 75%  | ¥0.003    | ¥0.015   |
+| Anthropic | Claude-3.7-Sonnet-T           | 200k  | ¥0.0045  | ¥0.0225  | 21%  | ¥0.003    | ¥0.015   |
+| Anthropic | Claude-3.7-Sonnet-Thinking    | 200k  | ¥0.0165  | ¥0.0825  | 75%  | ¥0.003    | ¥0.015   |
+| Anthropic | Claude-3.5-Sonnet-V2          | 200k  | ¥0.0165  | ¥0.0825  | 75%  | ¥0.003    | ¥0.015   |
+| Anthropic | Claude-3.5-Sonnet             | 200k  | ¥0.0165  | ¥0.0825  | 75%  | ¥0.003    | ¥0.015   |
+| Anthropic | Claude-3.5-Sonnet-V2-T        | 200k  | ¥0.003   | ¥0.015   | 14%  | ¥0.003    | ¥0.015   |
+| Anthropic | Claude-3-Opus                 | 200k  | ¥0.1125  | ¥0.5625  | 103% | ¥0.015    | ¥0.075   |
+| Anthropic | Claude-3-Opus-T               | 200k  | ¥0.015   | ¥0.075   | 14%  | ¥0.015    | ¥0.075   |
+| Anthropic | Claude-3.5-Haiku-V2           | 200k  | ¥0.004   | ¥0.02    | 55%  | ¥0.001    | ¥0.005   |
+| Anthropic | Claude-3.5-Haiku              | 200k  | ¥0.0075  | ¥0.0375  | 103% | ¥0.001    | ¥0.005   |
+| Anthropic | Claude-3-Sonnet               | 200k  | ¥0.012   | ¥0.06    | 55%  | ¥0.003    | ¥0.015   |
+| Anthropic | Claude-2.0                    | 200k  | ¥0.06    | ¥0.18    | 103% | ¥0.008    | ¥0.024   |
+| Anthropic | Claude-2.1                    | 200k  | ¥0.06    | ¥0.18    | 103% | ¥0.008    | ¥0.024   |
+| Anthropic | Claude-2                      | 200k  | ¥0.06    | ¥0.18    | 103% | ¥0.008    | ¥0.024   |
+| Anthropic | Claude-Instant                | 100k  | ¥0.006   | ¥0.018   | 14%  | ¥0.006    | ¥0.018   |
+| OpenAI    | o3-mini                       | 128k  | ¥0.0022  | ¥0.0088  | 27%  | ¥0.0011   | ¥0.0044  |
+| OpenAI    | o1-preview                    | 128k  | ¥0.045   | ¥0.18    | 41%  | ¥0.015    | ¥0.06    |
+| OpenAI    | o1-mini                       | 128k  | ¥0.0033  | ¥0.0132  | 41%  | ¥0.0011   | ¥0.0044  |
+| OpenAI    | GPT-4o                        | 128k  | ¥0.005   | ¥0.02    | 27%  | ¥0.0025   | ¥0.01    |
+| OpenAI    | GPT-4o-2024-11-20             | 128k  | ¥0.005   | ¥0.02    | 27%  | ¥0.0025   | ¥0.01    |
+| OpenAI    | GPT-4o-2024-08-06             | 128k  | ¥0.005   | ¥0.02    | 27%  | ¥0.0025   | ¥0.01    |
+| OpenAI    | GPT-4o-2024-05-13             | 128k  | ¥0.01    | ¥0.03    | 27%  | ¥0.005    | ¥0.015   |
+| OpenAI    | GPT-4o-Mini                   | 128k  | ¥0.0003  | ¥0.0012  | 27%  | ¥0.00015  | ¥0.0006  |
+| OpenAI    | GPT-4o-Mini-Free              | 8k    | ¥0.00001 | ¥0.00001 | 2%   | ¥0.00015  | ¥0.0006  |
+| OpenAI    | GPT-4-Turbo-2024-04-09        | 128k  | ¥0.02    | ¥0.06    | 27%  | ¥0.01     | ¥0.03    |
+| OpenAI    | GPT-4-0613                    | 8k    | ¥0.06    | ¥0.12    | 27%  | ¥0.03     | ¥0.06    |
+| OpenAI    | GPT-4-32k                     | 32k   | ¥0.12    | ¥0.24    | 27%  | ¥0.06     | ¥0.12    |
+| Google    | Gemini-2.0-Pro-Exp            | 1024k | ¥0.005   | ¥0.005   | 14%  | ¥0.005    | ¥0.005   |
+| Google    | Gemini-2.0-Flash-Thinking-Exp | 1024k | ¥0.005   | ¥0.005   | 14%  | ¥0.005    | ¥0.005   |
+| Google    | Gemini-2.0-Flash              | 1024k | ¥0.0001  | ¥0.0004  | 14%  | ¥0.0001   | ¥0.0004  |
+| Google    | Gemini-1.5-Pro-002            | 1024k | ¥0.00125 | ¥0.005   | 14%  | ¥0.00125  | ¥0.005   |
+| Google    | Gemini-1.5-Pro-001            | 1024k | ¥0.00125 | ¥0.005   | 14%  | ¥0.00125  | ¥0.005   |
+| Google    | Gemini-1.5-flash-002          | 1024k | ¥0.0005  | ¥0.001   | 46%  | ¥0.000075 | ¥0.0003  |
+| Google    | Gemini-1.5-flash-001          | 1024k | ¥0.0005  | ¥0.0015  | 69%  | ¥0.000075 | ¥0.0003  |
+| DeepSeek  | DeepSeek-V3                   | 128k  | ¥0.00125 | ¥0.0025  | 31%  | ¥0.00027  | ¥0.0011  |
+| DeepSeek  | DeepSeek-R1                   | 128k  | ¥0.007   | ¥0.014   | 88%  | ¥0.00055  | ¥0.00219 |
+| DeepSeek  | DeepSeek-R1-70B               | 128k  | ¥0.003   | ¥0.006   | 38%  | ¥0.00055  | ¥0.00219 |
+| x.ai      | Grok-3                        | 100k  | ¥0.0012  | ¥0.006   | 5%   | ¥0.005    | ¥0.015   |
+| x.ai      | Grok-3 Thinking               | 128k  | ¥0.0012  | ¥0.006   | 5%   | ¥0.005    | ¥0.015   |
+| x.ai      | Grok-3-R1                     | 100k  | ¥0.0012  | ¥0.006   | 5%   | ¥0.005    | ¥0.015   |
