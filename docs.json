@@ -16,9 +16,7 @@
           {
             "group": "简介",
             "pages": [
-              "introduction",
-              "quickstart",
-              "development"
+              "introduction"
             ]
           },
           {
