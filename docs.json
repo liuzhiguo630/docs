@@ -16,7 +16,8 @@
           {
             "group": "介绍",
             "pages": [
-              "introduction"
+              "introduction",
+              "model-updates"
             ]
           },
           {
