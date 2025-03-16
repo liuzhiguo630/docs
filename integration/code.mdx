@@ -1,37 +1,108 @@
 ---
-title: 'Code Blocks'
-description: 'Display inline code and code blocks'
-icon: 'code'
+title: "API 调用示例"
+icon: "code"
 ---
 
-## Basic
+## 聊天接口
 
-### Inline Code
+<Tip>
+  注意以下示例需要将 Authorization 中换成实际的登录码
+</Tip>
 
-To denote a `word` or `phrase` as code, enclose it in backticks (`).
+### 流式响应
 
+<CodeGroup>
+
+```shell Curl
+curl --location 'https://ai.liaobots.work/v1/chat/completions' \
+--header 'Authorization: Bearer <authcode>' \
+--header 'Content-Type: application/json' \
+--data '{
+    "model": "gpt-4o",
+    "messages": [
+        {
+            "role": "user",
+            "content": "Hi"
+        }
+    ],
+    "temperature": 1,
+    "stream": true
+}'
 ```
-To denote a `word` or `phrase` as code, enclose it in backticks (`).
+
+
+```python Python
+from openai import OpenAI
+
+client = OpenAI(
+    api_key='authcode',
+    base_url='https://ai.liaobots.work/v1'
+)
+
+
+stream = client.chat.completions.create(
+    model="gpt-4o",
+    messages=[
+        {
+            "role": "user",
+            "content": "Hi"
+        }
+    ],
+    stream=True,
+)
+
+
+for event in stream:
+    if event.choices[0].delta.content:
+        print(event.choices[0].delta.content)
 ```
 
-### Code Block
+</CodeGroup>
 
-Use [fenced code blocks](https://www.markdownguide.org/extended-syntax/#fenced-code-blocks) by enclosing code in three backticks and follow the leading ticks with the programming language of your snippet to get syntax highlighting. Optionally, you can also write the name of your code after the programming language.
+### 非流式响应
 
-```java HelloWorld.java
-class HelloWorld {
-    public static void main(String[] args) {
-        System.out.println("Hello, World!");
-    }
-}
+<CodeGroup>
+
+```shell Curl
+curl --location 'https://ai.liaobots.work/v1/chat/completions' \
+--header 'Authorization: Bearer <authcode>' \
+--header 'Content-Type: application/json' \
+--data '{
+    "model": "gpt-4o",
+    "messages": [
+        {
+            "role": "user",
+            "content": "Hi"
+        }
+    ],
+    "temperature": 1,
+    "stream": false
+}'
 ```
 
-````md
-```java HelloWorld.java
-class HelloWorld {
-    public static void main(String[] args) {
-        System.out.println("Hello, World!");
-    }
-}
+
+```python Python
+from openai import OpenAI
+
+client = OpenAI(
+    api_key='authcode',
+    base_url='https://ai.liaobots.work/v1'
+)
+
+
+stream = client.chat.completions.create(
+    model="gpt-4o",
+    messages=[
+        {
+            "role": "user",
+            "content": "Hi"
+        }
+    ],
+    stream=False,
+)
+
+
+print(stream.choices[0].message.content)
 ```
-````
+
+</CodeGroup>
