@@ -24,7 +24,7 @@
             "group": "如何接入",
             "pages": [
               "integration/api",
-              "integration/markdown",
+              "integration/dify",
               "integration/images",
               "integration/settings",
               "integration/navigation",
