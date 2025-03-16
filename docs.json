@@ -23,12 +23,12 @@
           {
             "group": "三方应用接入",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/settings",
-              "essentials/navigation",
-              "essentials/reusable-snippets"
+              "integration/markdown",
+              "integration/code",
+              "integration/images",
+              "integration/settings",
+              "integration/navigation",
+              "integration/reusable-snippets"
             ]
           }
         ]
