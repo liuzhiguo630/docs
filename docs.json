@@ -21,7 +21,7 @@
             ]
           },
           {
-            "group": "三方应用接入",
+            "group": "如何接入",
             "pages": [
               "integration/markdown",
               "integration/code",
