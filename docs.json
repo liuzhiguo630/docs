@@ -23,8 +23,8 @@
           {
             "group": "如何接入",
             "pages": [
+              "integration/api",
               "integration/markdown",
-              "integration/code",
               "integration/images",
               "integration/settings",
               "integration/navigation",
