@@ -25,10 +25,7 @@
             "pages": [
               "integration/api",
               "integration/dify",
-              "integration/images",
-              "integration/settings",
-              "integration/navigation",
-              "integration/reusable-snippets"
+              "integration/chatbox",
             ]
           }
         ]
