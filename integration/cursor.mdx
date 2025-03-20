@@ -4,34 +4,40 @@ description: ''
 icon: 'code'
 ---
 
-<img src="/images/cursor/cursor-icon.jpg" />
+![Cursor](/images/cursor/cursor-icon.jpg)
+
+安装 Cursor
 
 官网地址: [https://www.cursor.com/cn](https://www.cursor.com/cn)
 
-## 准备：
+## 准备工作
 
+> `OpenAI Base URL`：https://ai.liaobots.work/v1
+>
+> `API Key`：您的登陆码
+>
+> `模型名称`：在 [模型名与价格](/introduction.mdx) 找到您需要调用的模型名并复制下来
 
-**API Key**：您的登陆码
+## 流程
 
-**OpenAI Base URL**：https://ai.liaobots.work/v1
-
-## 流程：
-
-<img src="/images/cursor/step-1.jpg" />
-
-1.点击设置
-
-<img src="/images/cursor/step-2.jpg" />
-
-2.在左侧 「Models」 里下滑找到 「OpenAI API Key」 并输入 「API Key」 与 「OpenAI Base URL」
-
-3.设置完成后点击 Verify 后无报错即为成功连接
+<Steps>
+    <Step title="第一步">
+        <Card title="点击设置" img="/images/cursor/step-1.jpg">
+        </Card>
+    </Step>
+    <Step title="第二步">
+        <Card title="更改关键设置" img="/images/cursor/step-2.jpg">
+          在左侧 `Models` 里下滑找到 `OpenAI API Key` 并输入 `API Key` 与 `OpenAI Base URL`
+          设置完成后点击 `Verify` 无报错即为连接成功
+        </Card>
+    </Step>
+</Steps>
 
 <Warning>
 对于非 OpenAI 模型需更改模型名并添加使用
 </Warning>
 
-<Card title="添加模型" img="/images/cursor/tips.jpg">
-    先点击 「Add Model」 ，且添加模型需在模型名前加 「liao-」
-    例如 「grok-3」 应改为 「liao-grok-3」
+<Card title="更改模型兼容名称" img="/images/cursor/tips.jpg">
+    先点击 `Add Model` ，且添加模型需在模型名前加 `liao-`
+    例如 `grok-3` 应改为 `liao-grok-3`
 </Card>
