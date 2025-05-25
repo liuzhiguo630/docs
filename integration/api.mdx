@@ -3,6 +3,43 @@ title: "API 调用示例"
 icon: "code"
 ---
 
+## 如何接入
+
+我们支持各类模型的 API 调用，无需适配格式，使用 OpenAI API 格式，仅需修改 base_url 和 api_key。api_key 使用主站登录码，随用随充。
+
+<CardGroup cols="2">
+  <Card title="Chat Completions" icon="pen-to-square" href="https://platform.openai.com/docs/api-reference/chat/create">
+    OpenAI 官方 API 文档
+  </Card>
+</CardGroup>
+
+
+**base_url**: https://ai.liaobots.work/v1
+
+**api_key**: 登录码
+
+```shell
+curl --location 'https://ai.liaobots.work/v1/chat/completions' \
+--header 'Authorization: Bearer 登录码' \
+--header 'Content-Type: application/json' \
+--data '{
+    "model": "gpt-4o",
+    "stream": false,
+    "messages": [
+        {
+            "role": "user",
+            "content": "hi"
+        }
+    ]
+}'
+```
+
+## 计费规则
+
+**计费方式**：计费方式遵循 OpenAI API 的计价方法按 Token 计费，1000 Token ≈ 500-750 字。
+**积分与人民币比例**：积分与人民币为 1:1 比例，在 [模型与价格](/introduction.mdx) 中可以看到我们价格与官网正价的比例。
+**长对话计费原理**：与 AI 长对话的原理是，每一次对话都会隐性的将之前所有内容发给 AI，随着对话越来越长，累计发送的内容也会越多，因此 Token 消耗也会有所增加。
+
 ## 聊天接口
 
 <Tip>
