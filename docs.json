@@ -14,7 +14,17 @@
         "tab": "指南",
         "groups": [
           {
-            "group": "介绍",
+            "group": "快速开始",
+            "pages": [
+              "getting-started/Noun-introduction",
+              "getting-started/getting-started",
+              "getting-started/Aggregation-Site",
+              "getting-started/Mirror-Site",
+              "getting-started/API"
+            ]
+          },
+          {
+            "group": "模型详情",
             "pages": [
               "introduction",
               "model-updates"
@@ -36,7 +46,6 @@
     ]
   },
   "logo": {
-
     "light": "/logo/liao-light.svg",
     "dark": "/logo/liao-dark.svg"
   },
