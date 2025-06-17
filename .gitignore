@@ -14,7 +14,7 @@ Thumbs.db
 *.swo
 
 # Large media files - consider using Git LFS instead
-*.gif
+# *.gif  # Temporarily allowing GIF files for documentation
 *.mp4
 *.avi
 *.mov
