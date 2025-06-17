@@ -16,29 +16,33 @@
           {
             "group": "快速开始",
             "pages": [
-              "getting-started/Noun-introduction",
-              "getting-started/getting-started",
-              "getting-started/Aggregation-Site",
-              "getting-started/Mirror-Site",
-              "getting-started/API"
+              "Getting-Started/Quick-Started",
+              "Getting-Started/Mirror-Site",
+              "Getting-Started/API",
+              "Getting-Started/AI-Agent"
             ]
           },
           {
-            "group": "模型详情",
+            "group": "聚合站",
             "pages": [
-              "introduction",
-              "model-updates"
+              "Aggregation/Model-Chat",
+              "Aggregation/New-Feature",
+              "Aggregation/Model-Price",
+              "Aggregation/Model-Updates",
+              "Aggregation/Recently-Updates",
+              "Aggregation/Q-A"
             ]
           },
           {
-            "group": "如何接入",
+            "group": "API 接入",
             "pages": [
-              "integration/api",
-              "integration/dify",
-              "integration/chatbox",
-              "integration/SillyTavern",
-              "integration/cursor",
-              "integration/cline"
+              "API/API",
+              "API/Dify",
+              "API/Chatbox",
+              "API/SillyTavern",
+              "API/Cursor",
+              "API/Cline",
+              "API/Omate"
             ]
           }
         ]
