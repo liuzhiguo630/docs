@@ -37,6 +37,7 @@
             "group": "API 接入",
             "pages": [
               "API/API",
+              "API/ClaudeCode",
               "API/Dify",
               "API/Chatbox",
               "API/SillyTavern",
