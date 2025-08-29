@@ -17,36 +17,27 @@ icon: 'code'
 
 <Steps>
     <Step title="第一步">
-        <Card title="验证 Node.js 是否安装" img="/images/API/claudecode/step-1.png">
+        <Card title="验证 Node.js 是否安装" img="/images/API/ClaudeCode/step-1.png">
             打开终端输入 `node --version` 和 `npm --version` 验证 Node.js 是否安装
             出现类似 `v22.16.0` 的版本号进入下一步，否则请前往官网下载 https://nodejs.org/en/download/
         </Card>
     </Step>
     <Step title="第二步">
-        <Card title="安装 ClaudeCode" img="/images/API/claudecode/step-2.png">
+        <Card title="安装 ClaudeCode" img="/images/API/ClaudeCode/step-2.png">
             打开终端输入 `npm install -g @anthropic-ai/claude-code` 全局安装 ClaudeCode
             出现如图所示提示即表示安装成功
         </Card>
     </Step>
     <Step title="第三步">
-        <Card title="编辑配置文件" img="/images/API/claudecode/step-3.png">
+        <Card title="编辑配置文件" img="/images/API/ClaudeCode/step-3.png">
             接着依次运行 `cd ~/.claude` 和 `vim settings.json` 命令，进入配置文件编辑「根据您的操作系统，vim 可能会是 vi 等」
             将 `ANTHROPIC_AUTH_TOKEN` 替换为 `您的登录码`
             将 `ANTHROPIC_BASE_URL` 替换为 https://cc.liaobots.work/claudecode
         </Card>
     </Step>
     <Step title="第四步">
-        <Card title="启动 ClaudeCode" img="/images/API/claudecode/step-4.png">
+        <Card title="启动 ClaudeCode" img="/images/API/ClaudeCode/step-4.png">
             通过 cd 命令进入您想要编辑的项目文件夹，输入 `claude` 启动 ClaudeCode 后就可以开始对话了
         </Card>
     </Step>
 </Steps>
-
-<Warning>
-对于非 OpenAI 模型需更改模型名并添加使用
-</Warning>
-
-<Card title="更改模型兼容名称" img="/images/API/cursor/tips.jpg">
-    先点击 `Add Model` ，且添加模型需在模型名前加 `liao-`
-    例如 `grok-3` 应改为 `liao-grok-3`
-</Card>
