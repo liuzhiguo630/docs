@@ -7,7 +7,7 @@ icon: "code"
 
 ## 准备工作
 
-CodeX 计费方法同步官方，价格比例请参考 [模型与价格](/aggregation/Model-Price)
+CodeX 计费方法同步官方，价格比例请参考 [模型与价格](/Aggregation/Model-Price)
 
 ## 流程
 
@@ -26,9 +26,9 @@ CodeX 计费方法同步官方，价格比例请参考 [模型与价格](/aggreg
     </Card>
   </Step>
   <Step title="第三步 - 方法A：修改配置文件以持久化【推荐】">
-      <Card title="编辑配置文件" img="/images/API/CodeX/step-3a.png">
+      <Card title="编辑配置文件" img="/images/API/CodeX/step-3.png">
         接着使用您的操作系统进入 `~/.codex` 路径，使用`vim`或其他工具编辑 `config.toml` 文件，添加如下配置：
-        ```toml config.toml {2,3}
+        ```text config.toml {2,3}
         model_provider = "liao"
 
         [model_providers.liao]
@@ -51,11 +51,13 @@ CodeX 计费方法同步官方，价格比例请参考 [模型与价格](/aggreg
   <Step title="第三步 - 方法B：配置环境变量">
     <Card title="编辑配置文件">
       为您的命令行配置临时或永久环境变量`OPENAI_API_KEY`及`OPENAI_BASE_URL`
+
       Mac / Linux:
       ```shell
       export OPENAI_API_KEY=您的登录码
       export OPENAI_BASE_URL=https://cc.liaobots.work/codex/v1
       ```
+
       Windows:
       ```bash
       set OPENAI_API_KEY=您的登录码
@@ -66,7 +68,7 @@ CodeX 计费方法同步官方，价格比例请参考 [模型与价格](/aggreg
   </Step>
   <Step title="第四步">
     <Card title="开始使用" img="/images/API/CodeX/step-4.png">
-      通过 cd 命令进入您想要编辑的项目文件夹，输入 `codex` 后就可以开始互动了
+      通过 cd 命令进入您想要编辑的项目文件夹，输入 `codex` 后就可以开始使用CodeX了
     </Card>
   </Step>
 </Steps>
