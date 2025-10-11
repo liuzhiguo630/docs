@@ -37,6 +37,7 @@
             "group": "API 接入",
             "pages": [
               "API/API",
+              "API/CodeX",
               "API/ClaudeCode",
               "API/Dify",
               "API/Chatbox",
