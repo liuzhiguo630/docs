@@ -14,7 +14,7 @@
         "language": "en",
         "groups": [
           {
-            "group": "快速开始",
+            "group": "Quick Start",
             "pages": [
               "Getting-Started/en/Quick-Started",
               "Getting-Started/en/Mirror-Site",
@@ -23,7 +23,7 @@
             ]
           },
           {
-            "group": "聚合站",
+            "group": "Aggregation Site",
             "pages": [
               "Aggregation/en/Model-Chat",
               "Aggregation/en/New-Feature",
@@ -34,7 +34,7 @@
             ]
           },
           {
-            "group": "API 接入",
+            "group": "API Integration",
             "pages": [
               "API/en/CodeX",
               "API/en/ClaudeCode",
