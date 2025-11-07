@@ -1,33 +1,33 @@
 ---
-title: "接入 CodeX"
+title: "Integrate CodeX"
 icon: "code"
 ---
 
 ![CodeX](/images/API/CodeX/codex-cli-splash.png)
 
-## 准备工作
+## Preparation
 
-CodeX 计费方法同步官方，价格比例请参考 [模型与价格](/Aggregation/Model-Price)
+CodeX billing method is synchronized with official. For price ratio, please refer to [Models & Pricing](/Aggregation/Model-Price)
 
-## 流程
+## Process
 
 <Steps>
-  <Step title="第一步 - 安装 Node.js">
-    <Card title="验证 Node.js 是否安装" img="/images/API/ClaudeCode/step-1.png">
-      打开终端输入 `node --version` 和 `npm --version` 验证 Node.js 是否安装
-      出现类似 `v22.16.0` 的版本号进入下一步，否则请前往官网下载 https://nodejs.org/en/download/
+  <Step title="Step 1 - Install Node.js">
+    <Card title="Verify Node.js Installation" img="/images/API/ClaudeCode/step-1.png">
+      Open terminal and enter `node --version` and `npm --version` to verify Node.js installation
+      If you see a version number like `v22.16.0`, proceed to the next step. Otherwise, please download from the official website https://nodejs.org/en/download/
     </Card>
   </Step>
-  <Step title="第二步 - 安装 CodeX">
-    <Card title="安装 CodeX" img="/images/API/CodeX/step-2.png">
-      打开终端输入 `npm i -g @openai/codex` 全局安装 CodeX
-      安装成功后，在目标文件夹（比如将要新建/修改代码的文件夹）路径下使用`codex`命令启动
-      如图则安装成功（只是检查是否安装成功，不需要做出任何互动，启动成功后直接使用`Ctrl+C`退出即可）
+  <Step title="Step 2 - Install CodeX">
+    <Card title="Install CodeX" img="/images/API/CodeX/step-2.png">
+      Open terminal and enter `npm i -g @openai/codex` to install CodeX globally
+      After successful installation, use the `codex` command in the target folder path (such as the folder where you will create/modify code)
+      As shown in the image, installation is successful (this is just to check if installation is successful, no interaction is needed, just use `Ctrl+C` to exit after successful startup)
     </Card>
   </Step>
-  <Step title="第三步 - 方法A：修改配置文件以持久化【推荐】">
-      <Card title="编辑配置文件" img="/images/API/CodeX/step-3.png">
-        接着使用您的操作系统进入 `~/.codex` 路径，使用`vim`或其他工具新建或编辑 `config.toml` 文件，添加如下配置：
+  <Step title="Step 3 - Method A: Modify Configuration File for Persistence [Recommended]">
+      <Card title="Edit Configuration File" img="/images/API/CodeX/step-3.png">
+        Then use your operating system to enter the `~/.codex` path, use `vim` or other tools to create or edit the `config.toml` file, and add the following configuration:
         ```text config.toml {2,3}
         model_provider = "liao"
 
@@ -40,35 +40,35 @@ CodeX 计费方法同步官方，价格比例请参考 [模型与价格](/Aggreg
         stream_max_retries = 5
         stream_idle_timeout_ms = 300000
         ```
-        然后在`~/.codex`路径下新建`auth.json`文件，内容如下：
+        Then create an `auth.json` file in the `~/.codex` path with the following content:
         ```json
         {
-          "OPENAI_API_KEY": "您的登录码"
+          "OPENAI_API_KEY": "Your Login Code"
         }
         ```
       </Card>
     </Step>
-  <Step title="第三步 - 方法B：配置环境变量（与方法A任选其一即可）">
-    <Card title="编辑配置文件">
-      为您的命令行配置临时或永久环境变量`OPENAI_API_KEY`及`OPENAI_BASE_URL`
+  <Step title="Step 3 - Method B: Configure Environment Variables (Choose either Method A or B)">
+    <Card title="Edit Configuration File">
+      Configure temporary or permanent environment variables `OPENAI_API_KEY` and `OPENAI_BASE_URL` for your command line
 
       Mac / Linux:
       ```shell
-      export OPENAI_API_KEY=您的登录码
+      export OPENAI_API_KEY=Your Login Code
       export OPENAI_BASE_URL=https://cc.liaobots.work/codex/v1
       ```
 
       Windows:
       ```bash
-      set OPENAI_API_KEY=您的登录码
+      set OPENAI_API_KEY=Your Login Code
       set OPENAI_BASE_URL=https://cc.liaobots.work/codex/v1
       ```
-      上述例子为临时环境变量，如需修改永久环境变量请自寻教程
+      The above examples are temporary environment variables. If you need to modify permanent environment variables, please find tutorials yourself
     </Card>
   </Step>
-  <Step title="第四步 开始使用">
-    <Card title="开始使用" img="/images/API/CodeX/step-4.png">
-      通过 cd 命令进入您想要编辑的项目文件夹，输入 `codex` 后就可以开始使用CodeX了
+  <Step title="Step 4 Start Using">
+    <Card title="Start Using" img="/images/API/CodeX/step-4.png">
+      Use the cd command to enter the project folder you want to edit, enter `codex`, and then you can start using CodeX
     </Card>
   </Step>
 </Steps>

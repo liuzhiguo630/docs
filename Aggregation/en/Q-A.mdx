@@ -1,53 +1,53 @@
 ---
-title: "Q&A 常见问题"
-description: "本篇会对用户的常见问题进行解答"
+title: "Q&A Frequently Asked Questions"
+description: "This article answers users' frequently asked questions"
 icon: "question"
 ---
 
 <AccordionGroup>
-  <Accordion title="Q:无限卡和积分有什么区别" icon="money-bill-wave" iconType="regular">
-    无限卡和积分是本平台的两种账户资源，分别对应了官网的包月计费和 API 的按量计费 镜像站 1:1 还原了官方网站，同样包括了官网**按月付费**的无限卡消耗
+  <Accordion title="Q: What's the difference between Unlimited Card and Credits" icon="money-bill-wave" iconType="regular">
+    Unlimited Card and Credits are two types of account resources on this platform, corresponding to official monthly billing and API pay-as-you-go billing respectively. The mirror site is a 1:1 replica of the official website, including the official **monthly payment** Unlimited Card consumption
 
-    聚合站本质上是调用的各种模型的 API 来我们的前端网站使用，因此同样采用了**按量计费**的积分制消耗
+    The aggregation site essentially calls various model APIs for use on our frontend website, so it also adopts **pay-as-you-go** credit consumption
 
-    不过用户大可放心，无论是哪种计费方式，都远比官方价格更加便宜
+    However, users can rest assured that regardless of the billing method, both are much cheaper than official prices
   </Accordion>
-  <Accordion title="Q:为什么对话越长，消耗积分越多" icon="face-confused">
-    AI 是没有记忆的，因此与 AI 进行多轮对话的原理本质上是：<u>每一次对话时都会将此前的对话记录全部发给 AI</u>，随着对话轮数越来越多，发给 AI 的请求 Token 自然也会增多，所以会导致消耗逐渐增加
+  <Accordion title="Q: Why do longer conversations consume more credits" icon="face-confused">
+    AI has no memory, so the principle of multi-turn conversations with AI is essentially: <u>each conversation sends all previous conversation records to AI</u>. As the number of conversation turns increases, the request tokens sent to AI will naturally increase, so consumption will gradually increase
 
-    但用户可以通过选择模型的下拉菜单中的**附带历史消息条数**来控制每一次对话时都只发送最近多少条消息，来合理控制模型的记忆和消耗
+    However, users can control how many recent messages are sent in each conversation through **Number of Historical Messages** in the model selection dropdown menu to reasonably control model memory and consumption
   </Accordion>
-  <Accordion title="Q:镜像站常见报错" icon="brake-warning">
-    用户可能经常在 Claude 镜像站看见 **「you have sent too many message....」** 或类似的报错，这其实是因为由于采用了订阅制度，所以任何 AI 的官方网站都是有着**速率限制**的：
+  <Accordion title="Q: Common Mirror Site Errors" icon="brake-warning">
+    Users may often see **"you have sent too many message...."** or similar errors on Claude mirror sites. This is actually because official websites of any AI have **rate limits** due to the subscription system:
 
-    即一个账户在单位时间内能发送的消息有限不过本平台支持**新开对话**之后就能切换到另一个可用的账户上去，所以如果当您当前对话受限了，新开一个对话即可解决问题
+    That is, an account can only send a limited number of messages per unit of time. However, this platform supports **opening a new conversation** to switch to another available account, so if your current conversation is limited, opening a new conversation will solve the problem
 
     <Note>
-      请注意！如果看见了要求您升级如 Plus，或 Max 订阅等提示，请不要点击，因为那是在提醒您当前对话背后的账户升级订阅，而您在本平台的唯一使用凭证是登录码，与官网提示并无联系
+      Please note! If you see prompts asking you to upgrade to Plus or Max subscriptions, please do not click, as that is reminding you that the account behind your current conversation is upgrading its subscription. Your only credential for using this platform is the Login Code, which has no connection to official website prompts
     </Note>
   </Accordion>
-  <Accordion title="Q:为什么聚合站无法上传文件" icon="upload">
-    当前的 AI 模型只具备文本和图像的处理能力，所以上传文件并不是模型原生的能力
+  <Accordion title="Q: Why can't the aggregation site upload files" icon="upload">
+    Current AI models only have text and image processing capabilities, so uploading files is not a native model capability
 
-    负责上传和解析文件的是网站，而模型本质上仍然是在处理文件里的文本和图像
+    The website is responsible for uploading and parsing files, while the model essentially still processes text and images in the files
 
-    您可以将我们的 API 接入支持解析文件的第三方平台「如 Chatbox」前去使用，或是手动将文件中的内容传给 AI，将会收获完全一样的效果，因为 AI 本质就是这样在工作
+    You can integrate our API into third-party platforms that support file parsing (such as Chatbox) for use, or manually pass the content in files to AI, which will achieve exactly the same effect, because this is essentially how AI works
 
     <Tip>
-      我们将很快会支持上传文件功能，请关注近期更新页面～
+      We will soon support file upload functionality, please follow our recent updates page～
     </Tip>
   </Accordion>
-  <Accordion title="Q:为什么我邀请人没有返回积分" icon="star-of-david">
-    通过您的邀请链接**首次加入我们**的新用户将会与您建立绑定关系
+  <Accordion title="Q: Why didn't I receive credits for inviting someone" icon="star-of-david">
+    New users who **join us for the first time** through your **Referral Link** will establish a binding relationship with you
 
-    您可以通过点击**推荐列表**里的内容查看与用户的绑定关系，如果该用户此前已经访问过我们网站了，由于他初次访问我们平台时就会自动分配登录码，因此该登录码是不会与您建立绑定关系的
+    You can check the binding relationship with users by clicking the content in **Referral List**. If the user has already visited our website before, since they will automatically be assigned a Login Code when they first visit our platform, that Login Code will not establish a binding relationship with you
   </Accordion>
 </AccordionGroup>
 
-如果您的问题较为复杂，在本页面没有获取任何帮助的话，请加入我们的用户群，我们会在群里实时解答您的疑问
+If your question is more complex and you haven't found any help on this page, please join our user group, and we will answer your questions in real-time in the group
 
 <CardGroup cols="2">
-  <Card title="加入我们" icon="link-horizontal" href="https://resource.liaobots.com/qq_group.jpeg">
-    点击加入我们的用户群！
+  <Card title="Join Us" icon="link-horizontal" href="https://resource.liaobots.com/qq_group.jpeg">
+    Click to join our user group!
   </Card>
 </CardGroup>
