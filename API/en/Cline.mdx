@@ -1,0 +1,46 @@
+---
+title: '接入 Cline'
+description: ''
+icon: 'code'
+---
+
+![Cline](/images/API/cline/cline-icon.jpg)
+
+在 VScode 里搜索 cline 并安装
+
+官网地址：[https://code.visualstudio.com/](https://code.visualstudio.com/)
+
+## 准备工作：
+
+> `Base URL`：https://ai.liaobots.work/v1
+>
+>
+> `API Key`：您的登陆码
+>
+>
+> `Model ID`：在 [模型名与价格](/Aggregation/Model-Price.mdx) 找到您需要调用的模型名并复制下来
+
+## 流程
+
+<Steps>
+    <Step title="第一步">
+        <Card title="选择使用自己的 API" img="/images/API/cline/step-1.jpg">
+          选择 `Use your own API Key`
+        </Card>
+    </Step>
+    <Step title="第二步">
+    <Card title="将自定义模型提供商更改为兼容 OpenAI" img="/images/API/cline/step-2.jpg">
+      在 `API Provider` 里选择 `OpenAI Compatible`
+    </Card>
+    </Step>
+    <Step title="第三步">
+    <Card title="更改关键设置" img="/images/API/cline/step-3.jpg">
+      填入 `BASE URL` `API Key` 以及 `Model ID`
+    </Card>
+    </Step>
+    <Step title="第四步">
+    <Card title="测试连接" img="/images/API/cline/step-4.jpg">
+      在右下角点击 `plan` 后发送测试消息
+    </Card>
+    </Step>
+</Steps>

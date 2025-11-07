@@ -1,0 +1,74 @@
+---
+title: "接入 CodeX"
+icon: "code"
+---
+
+![CodeX](/images/API/CodeX/codex-cli-splash.png)
+
+## 准备工作
+
+CodeX 计费方法同步官方，价格比例请参考 [模型与价格](/Aggregation/Model-Price)
+
+## 流程
+
+<Steps>
+  <Step title="第一步 - 安装 Node.js">
+    <Card title="验证 Node.js 是否安装" img="/images/API/ClaudeCode/step-1.png">
+      打开终端输入 `node --version` 和 `npm --version` 验证 Node.js 是否安装
+      出现类似 `v22.16.0` 的版本号进入下一步，否则请前往官网下载 https://nodejs.org/en/download/
+    </Card>
+  </Step>
+  <Step title="第二步 - 安装 CodeX">
+    <Card title="安装 CodeX" img="/images/API/CodeX/step-2.png">
+      打开终端输入 `npm i -g @openai/codex` 全局安装 CodeX
+      安装成功后，在目标文件夹（比如将要新建/修改代码的文件夹）路径下使用`codex`命令启动
+      如图则安装成功（只是检查是否安装成功，不需要做出任何互动，启动成功后直接使用`Ctrl+C`退出即可）
+    </Card>
+  </Step>
+  <Step title="第三步 - 方法A：修改配置文件以持久化【推荐】">
+      <Card title="编辑配置文件" img="/images/API/CodeX/step-3.png">
+        接着使用您的操作系统进入 `~/.codex` 路径，使用`vim`或其他工具新建或编辑 `config.toml` 文件，添加如下配置：
+        ```text config.toml {2,3}
+        model_provider = "liao"
+
+        [model_providers.liao]
+        name = "liao"
+        base_url = "https://cc.liaobots.work/codex/v1"
+        env_key = "OPENAI_API_KEY"
+        wire_api = "responses"
+        request_max_retries = 4
+        stream_max_retries = 5
+        stream_idle_timeout_ms = 300000
+        ```
+        然后在`~/.codex`路径下新建`auth.json`文件，内容如下：
+        ```json
+        {
+          "OPENAI_API_KEY": "您的登录码"
+        }
+        ```
+      </Card>
+    </Step>
+  <Step title="第三步 - 方法B：配置环境变量（与方法A任选其一即可）">
+    <Card title="编辑配置文件">
+      为您的命令行配置临时或永久环境变量`OPENAI_API_KEY`及`OPENAI_BASE_URL`
+
+      Mac / Linux:
+      ```shell
+      export OPENAI_API_KEY=您的登录码
+      export OPENAI_BASE_URL=https://cc.liaobots.work/codex/v1
+      ```
+
+      Windows:
+      ```bash
+      set OPENAI_API_KEY=您的登录码
+      set OPENAI_BASE_URL=https://cc.liaobots.work/codex/v1
+      ```
+      上述例子为临时环境变量，如需修改永久环境变量请自寻教程
+    </Card>
+  </Step>
+  <Step title="第四步 开始使用">
+    <Card title="开始使用" img="/images/API/CodeX/step-4.png">
+      通过 cd 命令进入您想要编辑的项目文件夹，输入 `codex` 后就可以开始使用CodeX了
+    </Card>
+  </Step>
+</Steps>
