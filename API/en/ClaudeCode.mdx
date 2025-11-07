@@ -1,18 +1,18 @@
 ---
-title: "接入 ClaudeCode"
+title: "Integrate ClaudeCode"
 icon: "code"
 ---
 
 ![ClaudeCode](/images/API/ClaudeCode/claudecode-icon.png)
 
-## 准备工作
+## Preparation
 
-Claude code 计费方法同步官方，价格比例请参考 [模型与价格](/Aggregation/Model-Price)
+Claude Code billing method is synchronized with official. For price ratio, please refer to [Models & Pricing](/Aggregation/Model-Price)
 
 ```json settings.json {2,3}
 {
   "env": {
-    "ANTHROPIC_AUTH_TOKEN": "您的登录码",
+    "ANTHROPIC_AUTH_TOKEN": "Your Login Code",
     "ANTHROPIC_BASE_URL": "https://cc.liaobots.work/claudecode"
   },
   "permissions": {
@@ -22,30 +22,30 @@ Claude code 计费方法同步官方，价格比例请参考 [模型与价格](/
 }
 ```
 
-## 流程
+## Process
 
 <Steps>
-  <Step title="第一步">
-    <Card title="验证 Node.js 是否安装" img="/images/API/ClaudeCode/step-1.png">
-      打开终端输入 `node --version` 和 `npm --version` 验证 Node.js 是否安装
-      出现类似 `v22.16.0` 的版本号进入下一步，否则请前往官网下载 https://nodejs.org/en/download/
+  <Step title="Step 1">
+    <Card title="Verify Node.js Installation" img="/images/API/ClaudeCode/step-1.png">
+      Open terminal and enter `node --version` and `npm --version` to verify Node.js installation
+      If you see a version number like `v22.16.0`, proceed to the next step. Otherwise, please download from the official website https://nodejs.org/en/download/
     </Card>
   </Step>
-  <Step title="第二步">
-    <Card title="安装 ClaudeCode" img="/images/API/ClaudeCode/step-2.png">
-      打开终端输入 `npm install -g @anthropic-ai/claude-code` 全局安装 ClaudeCode
-      出现如图所示提示即表示安装成功
+  <Step title="Step 2">
+    <Card title="Install ClaudeCode" img="/images/API/ClaudeCode/step-2.png">
+      Open terminal and enter `npm install -g @anthropic-ai/claude-code` to install ClaudeCode globally
+      If you see the prompt as shown in the image, it means installation is successful
     </Card>
   </Step>
-  <Step title="第三步">
-    <Card title="编辑配置文件" img="/images/API/ClaudeCode/step-3.png">
-      接着依次运行 `cd ~/.claude` 和 `vim settings.json` 命令，进入配置文件编辑「根据您的操作系统，vim 可能会是 vi 等」，复制并更改上述配置设置后粘贴进去，接着按下 `Esc` 键，输入 `:wq` 命令保存并退出
-      保存成功后，ClaudeCode 就可以开始工作了
+  <Step title="Step 3">
+    <Card title="Edit Configuration File" img="/images/API/ClaudeCode/step-3.png">
+      Then run `cd ~/.claude` and `vim settings.json` commands in sequence to enter configuration file editing (depending on your operating system, vim might be vi, etc.). Copy and change the above configuration settings and paste them in, then press the `Esc` key and enter `:wq` command to save and exit
+      After successful save, ClaudeCode can start working
     </Card>
   </Step>
-  <Step title="第四步">
-    <Card title="启动 ClaudeCode" img="/images/API/ClaudeCode/step-4.png">
-      通过 cd 命令进入您想要编辑的项目文件夹，输入 `claude` 启动 ClaudeCode 后就可以开始对话了
+  <Step title="Step 4">
+    <Card title="Start ClaudeCode" img="/images/API/ClaudeCode/step-4.png">
+      Use the cd command to enter the project folder you want to edit, enter `claude` to start ClaudeCode, and then you can start chatting
     </Card>
   </Step>
 </Steps>
