@@ -1,40 +1,40 @@
 ---
-title: "Models & Pricing"
-description: "Liaobots is committed to providing developers with fast, convenient, and affordable API interface solutions, building a stable and easy-to-use API platform that integrates almost all AI large models in one place."
+title: "模型与价格"
+description: "Liaobots 致力于为开发者提供快速、便捷、便宜的 API 接口调用方案，打造稳定且易于使用的 API 接口平台，一站式集成几乎所有AI大模型。"
 icon: "align-left"
 ---
 
 ![Price Jp](/images/Aggregation/Model-Price/price.jpg)
 
-## Billing Rules
+## 计费规则
 
-**Billing Method**: Billing follows OpenAI API's token-based pricing method, where 1000 tokens ≈ 500-750 words.
+**计费方式**：计费方式遵循 OpenAI API 的计价方法按 Token 计费，1000 Token ≈ 500-750 字。
 
-**Claude Code Billing Method**: The billing algorithm is consistent with the official, with dynamically adjusted price ratio. Current ratio: 1 USD = 1.6 credits
+**Claude Code 计费方式**：计费算法与官方保持一致，价格比例动态调整，当前比例为 1 美元 = 1.6 积分
 
-**CodeX Billing Method**: The billing algorithm is consistent with the official, with dynamically adjusted price ratio. Current ratio: 1 USD = 0.5 credits
+**CodeX 计费方式**：计费算法与官方保持一致，价格比例动态调整，当前比例为 1 美元 = 0.5 积分
 
-**Credits to RMB Ratio**: Credits and RMB are at a 1:1 ratio. In this article, you can see the ratio between our prices and official prices.
+**积分与人民币比例**：积分与人民币为 1:1 比例，在本篇中可以看到我们价格与官网正价的比例。
 
-**Long Conversation Billing Principle**: The principle of long conversations with AI is that each conversation implicitly sends all previous content to the AI. As conversations get longer, the cumulative content sent also increases, so token consumption will also increase.
+**长对话计费原理**：与 AI 长对话的原理是，每一次对话都会隐性的将之前所有内容发给 AI，随着对话越来越长，累计发送的内容也会越多，因此 Token 消耗也会有所增加。
 
-## How to Integrate
+## 如何接入
 
-We support API calls for various models. No format adaptation is needed. Use OpenAI API format, just modify base_url and api_key. api_key uses the main site Login Code, pay-as-you-go.
+我们支持各类模型的 API 调用，无需适配格式，使用 OpenAI API 格式，仅需修改 base_url 和 api_key。api_key 使用主站登录码，随用随充。
 
 <CardGroup cols="2">
   <Card title="Chat Completions" icon="pen-to-square" href="https://platform.openai.com/docs/api-reference/chat/create">
-    OpenAI Official API Documentation
+    OpenAI 官方 API 文档
   </Card>
 </CardGroup>
 
 **base_url**: https://ai.liaobots.work/v1
 
-**api_key**: Login Code
+**api_key**: 登录码
 
 ```shell
 curl --location 'https://ai.liaobots.work/v1/chat/completions' \
---header 'Authorization: Bearer Login Code' \
+--header 'Authorization: Bearer 登录码' \
 --header 'Content-Type: application/json' \
 --data '{
     "model": "gpt-4o",
@@ -48,14 +48,14 @@ curl --location 'https://ai.liaobots.work/v1/chat/completions' \
 }'
 ```
 
-## Model List
+## 模型列表
 
 <Tip>
-  The following prices are for **1k tokens**. Official prices are in USD, and credits can be simply calculated as RMB. Latest exchange rate (~7.3): [usd-to-cny-rate](https://wise.com/zh-cn/currency-converter/usd-to-cny-rate)
+  以下均为 **1k tokens** 时的价格，其中官方价格是美元，积分可以简单计算为人民币，最新汇率比例(~7.3)： [usd-to-cny-rate](https://wise.com/zh-cn/currency-converter/usd-to-cny-rate)
 </Tip>
 
 <Tip>
-  Prices may change with market fluctuations, but we will always insist on providing lower prices than official
+  价格随时会市场变动，但我们会始终坚持提供比官方更低的价格
 </Tip>
 
 
@@ -115,7 +115,6 @@ curl --location 'https://ai.liaobots.work/v1/chat/completions' \
 | Google | gemini-2.0-flash-thinking-exp | 1024.0K | 输入 0.003, 输出 0.012 | 32% | 输入 0.005, 输出 0.005 |
 | Google | gemini-2.0-flash-exp | 1024.0K | 输入 0.003, 输出 0.012 | 32% | 输入 0.005, 输出 0.005 |
 | Google | gemini-2.0-flash | 1024.0K | 输入 0.0001, 输出 0.0004 | 13% | 输入 0.0001, 输出 0.0004 |
-| Google | gemini-3-pro-image-preview | 256.0K | 输入 0.2, 输出 0.2 | 6% | 输入 0.4, 输出 0.4 |
 | Google | gemini-2.5-flash-image-preview | 32.0K | 输入 0.1, 输出 0.1 | 6% | 输入 0.2, 输出 0.2 |
 | Kimi | kimi-k2-thinking | 192.0K | 输入 0.0011, 输出 0.00438 | 27% | 输入 0.00055, 输出 0.00219 |
 | MiniMax | minimax-m2 | 192.0K | 输入 0.0011, 输出 0.00438 | 27% | 输入 0.00055, 输出 0.00219 |
@@ -148,12 +147,12 @@ curl --location 'https://ai.liaobots.work/v1/chat/completions' \
 | OpenAI | gpt-4o-2024-05-13 | 128.0K | 输入 0.01, 输出 0.03 | 27% | 输入 0.005, 输出 0.015 |
 | OpenAI | gpt-4o-2024-11-20 | 128.0K | 输入 0.005, 输出 0.02 | 27% | 输入 0.0025, 输出 0.01 |
 | OpenAI | gpt-4.5-preview | 128.0K | 输入 0.15, 输出 0.3 | 27% | 输入 0.075, 输出 0.15 |
-| OpenAI | gpt-4.1-nano | 1000.0K | 输入 0.0002, 输出 0.0008 | 27% | 输入 0.0001, 输出 0.0004 |
 | OpenAI | gpt-4.1-nano-2025-04-14 | 1000.0K | 输入 0.0002, 输出 0.0008 | 27% | 输入 0.0001, 输出 0.0004 |
-| OpenAI | gpt-4.1-mini | 1000.0K | 输入 0.0008, 输出 0.0032 | 27% | 输入 0.0004, 输出 0.0016 |
+| OpenAI | gpt-4.1-nano | 1000.0K | 输入 0.0002, 输出 0.0008 | 27% | 输入 0.0001, 输出 0.0004 |
 | OpenAI | gpt-4.1-mini-2025-04-14 | 1000.0K | 输入 0.0008, 输出 0.0032 | 27% | 输入 0.0004, 输出 0.0016 |
-| OpenAI | gpt-4.1 | 1000.0K | 输入 0.004, 输出 0.016 | 27% | 输入 0.002, 输出 0.008 |
+| OpenAI | gpt-4.1-mini | 1000.0K | 输入 0.0008, 输出 0.0032 | 27% | 输入 0.0004, 输出 0.0016 |
 | OpenAI | gpt-4.1-2025-04-14 | 1000.0K | 输入 0.004, 输出 0.016 | 27% | 输入 0.002, 输出 0.008 |
+| OpenAI | gpt-4.1 | 1000.0K | 输入 0.004, 输出 0.016 | 27% | 输入 0.002, 输出 0.008 |
 | OpenAI | gpt-4-turbo-preview | 128.0K | 输入 0.02, 输出 0.06 | 27% | 输入 0.01, 输出 0.03 |
 | OpenAI | gpt-4-turbo-2024-04-09 | 128.0K | 输入 0.02, 输出 0.06 | 27% | 输入 0.01, 输出 0.03 |
 | OpenAI | gpt-4-turbo | 128.0K | 输入 0.02, 输出 0.06 | 27% | 输入 0.01, 输出 0.03 |
