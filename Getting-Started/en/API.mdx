@@ -113,7 +113,7 @@ print(stream.choices[0].message.content)
 ### Non-Streaming Response
 
 ```shell Curl
-curl "https://ai.liaobots.work/v1beta/models/gemini-3-pro-preview(or other model):generateContent" \
+curl "https://ai.liaobots.work/v1beta/models/gemini-3-pro-preview(or other models):generateContent" \
   -H "x-goog-api-key: <authcode>" \
   -H 'Content-Type: application/json' \
   -X POST \
@@ -131,7 +131,7 @@ curl "https://ai.liaobots.work/v1beta/models/gemini-3-pro-preview(or other model
 ```
 
 ### Streaming Response
-curl "https://ai.liaobots.work/v1beta/models/gemini-3-pro-preview(或其他模型):streamGenerateContent?alt=sse" \
+curl "https://ai.liaobots.work/v1beta/models/gemini-3-pro-preview(or other models):streamGenerateContent?alt=sse" \
   -H "x-goog-api-key: <authcode>" \
   -H 'Content-Type: application/json' \
   -X POST \
