@@ -131,6 +131,8 @@ curl "https://ai.liaobots.work/v1beta/models/gemini-3-pro-preview(或其他模�
 ```
 
 ### 流式响应
+
+```shell Curl
 curl "https://ai.liaobots.work/v1beta/models/gemini-3-pro-preview(或其他模型):streamGenerateContent?alt=sse" \
   -H "x-goog-api-key: <authcode>" \
   -H 'Content-Type: application/json' \
@@ -187,6 +189,8 @@ curl "https://ai.liaobots.work/v1beta/models/gemini-3-pro-image-preview:generate
 ```
 
 ### 流式响应
+
+```shell Curl
 curl "https://ai.liaobots.work/v1beta/models/gemini-3-pro-image-preview:streamGenerateContent?alt=sse" \
   -H "x-goog-api-key: <authcode>" \
   -H 'Content-Type: application/json' \
