@@ -107,3 +107,110 @@ print(stream.choices[0].message.content)
 ```
 
 </CodeGroup>
+
+## Gemini(Gemini format)
+
+### Non-Streaming Response
+
+```shell Curl
+curl "https://ai.liaobots.work/v1beta/models/gemini-3-pro-preview(or other model):generateContent" \
+  -H "x-goog-api-key: <authcode>" \
+  -H 'Content-Type: application/json' \
+  -X POST \
+  -d '{
+    "contents": [
+      {
+        "parts": [
+          {
+            "text": "Explain how AI works in a few words"
+          }
+        ]
+      }
+    ]
+  }'
+```
+
+### Streaming Response
+curl "https://ai.liaobots.work/v1beta/models/gemini-3-pro-preview(或其他模型):streamGenerateContent?alt=sse" \
+  -H "x-goog-api-key: <authcode>" \
+  -H 'Content-Type: application/json' \
+  -X POST \
+  -d '{
+    "contents": [
+      {
+        "parts": [
+          {
+            "text": "Explain how AI works in a few words"
+          }
+        ]
+      }
+    ]
+  }'
+```
+
+## Gemini Nano Banana 2/Pro
+
+### Non-Streaming Response
+
+```shell Curl
+curl "https://ai.liaobots.work/v1beta/models/gemini-3-pro-image-preview:generateContent" \
+  -H "x-goog-api-key: <authcode>" \
+  -H 'Content-Type: application/json' \
+  -X POST \
+  -d '{
+      "contents": [
+          {
+              "parts": [
+                  {
+                      "text": "Generate a visualization of the current weather in Tokyo."
+                  }
+              ]
+          }
+      ],
+      "tools": [
+          {
+              "googleSearch": {}
+          }
+      ],
+      "generationConfig": {
+          "imageConfig": {
+              "aspectRatio": "1:1",
+              "imageSize": "2k"
+          },
+          "responseModalities":
+          [
+              "TEXT",
+              "IMAGE"
+          ]
+      }
+  }
+```
+
+### Streaming Response
+curl "https://ai.liaobots.work/v1beta/models/gemini-3-pro-image-preview:streamGenerateContent?alt=sse" \
+  -H "x-goog-api-key: <authcode>" \
+  -H 'Content-Type: application/json' \
+  -X POST \
+  -d '{
+      "contents": [
+          {
+              "parts": [
+                  {
+                      "text": "Generate two dogs in manga style."
+                  }
+              ]
+          }
+      ],
+      "generationConfig": {
+          "imageConfig": {
+              "aspectRatio": "16:9",
+              "imageSize": "1K"
+          },
+          "responseModalities":
+          [
+              "TEXT",
+              "IMAGE"
+          ]
+      }
+  }
+```

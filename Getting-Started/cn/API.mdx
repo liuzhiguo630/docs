@@ -4,7 +4,7 @@ description: "我们支持各种模型的 API 调用，仅需一个 Key 即可�
 icon: "plug"
 ---
 
-## 聊天接口
+## Chat Completions 接口（OpenAI格式）
 
 <Tip>
   注意以下示例需要将 Authorization 中换成实际的登录码
@@ -107,3 +107,110 @@ print(stream.choices[0].message.content)
 ```
 
 </CodeGroup>
+
+## Gemini 接口（Gemini格式）
+
+### 非流式响应
+
+```shell Curl
+curl "https://ai.liaobots.work/v1beta/models/gemini-3-pro-preview(或其他模型):generateContent" \
+  -H "x-goog-api-key: <authcode>" \
+  -H 'Content-Type: application/json' \
+  -X POST \
+  -d '{
+    "contents": [
+      {
+        "parts": [
+          {
+            "text": "Explain how AI works in a few words"
+          }
+        ]
+      }
+    ]
+  }'
+```
+
+### 流式响应
+curl "https://ai.liaobots.work/v1beta/models/gemini-3-pro-preview(或其他模型):streamGenerateContent?alt=sse" \
+  -H "x-goog-api-key: <authcode>" \
+  -H 'Content-Type: application/json' \
+  -X POST \
+  -d '{
+    "contents": [
+      {
+        "parts": [
+          {
+            "text": "Explain how AI works in a few words"
+          }
+        ]
+      }
+    ]
+  }'
+```
+
+## Gemini Nano Banana 2/Pro
+
+### 非流式响应
+
+```shell Curl
+curl "https://ai.liaobots.work/v1beta/models/gemini-3-pro-image-preview:generateContent" \
+  -H "x-goog-api-key: <authcode>" \
+  -H 'Content-Type: application/json' \
+  -X POST \
+  -d '{
+      "contents": [
+          {
+              "parts": [
+                  {
+                      "text": "Generate a visualization of the current weather in Tokyo."
+                  }
+              ]
+          }
+      ],
+      "tools": [
+          {
+              "googleSearch": {}
+          }
+      ],
+      "generationConfig": {
+          "imageConfig": {
+              "aspectRatio": "1:1",
+              "imageSize": "2k"
+          },
+          "responseModalities":
+          [
+              "TEXT",
+              "IMAGE"
+          ]
+      }
+  }
+```
+
+### 流式响应
+curl "https://ai.liaobots.work/v1beta/models/gemini-3-pro-image-preview:streamGenerateContent?alt=sse" \
+  -H "x-goog-api-key: <authcode>" \
+  -H 'Content-Type: application/json' \
+  -X POST \
+  -d '{
+      "contents": [
+          {
+              "parts": [
+                  {
+                      "text": "Generate two dogs in manga style."
+                  }
+              ]
+          }
+      ],
+      "generationConfig": {
+          "imageConfig": {
+              "aspectRatio": "16:9",
+              "imageSize": "1K"
+          },
+          "responseModalities":
+          [
+              "TEXT",
+              "IMAGE"
+          ]
+      }
+  }
+```
