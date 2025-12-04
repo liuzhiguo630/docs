@@ -34,18 +34,17 @@ CodeX 计费方法同步官方，价格比例请参考 [模型与价格](/Aggreg
         [model_providers.liao]
         name = "liao"
         base_url = "https://cc.liaobots.work/codex/v1"
-        env_key = "OPENAI_API_KEY"
+        env_key = "LIAO_API_KEY"
         wire_api = "responses"
         request_max_retries = 4
         stream_max_retries = 5
         stream_idle_timeout_ms = 300000
         ```
-        然后在`~/.codex`路径下新建`auth.json`文件，内容如下：
-        ```json
-        {
-          "OPENAI_API_KEY": "您的登录码"
-        }
+        然后在`~/.codex`路径下新建`.env`文件，写入环境变量：
+        ```.env
+        LIAO_API_KEY=您的登录码
         ```
+        注：最新版本的`codex`已不支持通过`auth.json`设置环境变量，请改为以上方案。
       </Card>
     </Step>
   <Step title="第三步 - 方法B：配置环境变量（与方法A任选其一即可）">
