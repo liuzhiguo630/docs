@@ -120,6 +120,15 @@ curl "https://ai.liaobots.work/v1beta/models/gemini-3-pro-preview(或其他模�
   -d '{
     "contents": [
       {
+        "role": "system",
+        "parts": [
+          {
+            "text": "You are a helpful assistant. Reply in Chinese."
+          }
+        ]
+      },
+      {
+        "role": "user",
         "parts": [
           {
             "text": "Explain how AI works in a few words"
@@ -140,6 +149,15 @@ curl "https://ai.liaobots.work/v1beta/models/gemini-3-pro-preview(或其他模�
   -d '{
     "contents": [
       {
+        "role": "system",
+        "parts": [
+          {
+            "text": "You are a helpful assistant. Reply in Chinese."
+          }
+        ]
+      },
+      {
+        "role": "user",
         "parts": [
           {
             "text": "Explain how AI works in a few words"
@@ -177,7 +195,7 @@ curl "https://ai.liaobots.work/v1beta/models/gemini-3-pro-image-preview:generate
       "generationConfig": {
           "imageConfig": {
               "aspectRatio": "1:1",
-              "imageSize": "2k"
+              "imageSize": "2K"
           },
           "responseModalities":
           [
