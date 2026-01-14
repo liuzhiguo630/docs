@@ -38,12 +38,22 @@ Claude Code billing method is synchronized with official. For price ratio, pleas
     </Card>
   </Step>
   <Step title="Step 3">
-    <Card title="Edit Configuration File" img="/images/API/ClaudeCode/step-3.png">
+    <Card title="Create Configuration File" img="/images/API/ClaudeCode/step-3.png">
+      Create a `.claude.json` file (note: `.claude.json`, not `.claude` folder) in the user directory, add the following content:
+      ```json
+      {
+        "hasCompletedOnboarding": true
+      }
+      ```
+    </Card>
+  </Step>
+  <Step title="Step 4">
+    <Card title="Edit Configuration File">
       Then run `cd ~/.claude` and `vim settings.json` commands in sequence to enter configuration file editing (depending on your operating system, vim might be vi, etc.). Copy and change the above configuration settings and paste them in, then press the `Esc` key and enter `:wq` command to save and exit
       After successful save, ClaudeCode can start working
     </Card>
   </Step>
-  <Step title="Step 4">
+  <Step title="Step 5">
     <Card title="Start ClaudeCode" img="/images/API/ClaudeCode/step-4.png">
       Use the cd command to enter the project folder you want to edit, enter `claude` to start ClaudeCode, and then you can start chatting
     </Card>
