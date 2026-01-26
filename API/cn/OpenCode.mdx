@@ -1,0 +1,117 @@
+---
+title: "接入 OpenCode"
+icon: "code"
+---
+
+![OpenCode](/images/API/OpenCode/opencode-icon.png)
+
+## 准备工作
+
+参照![官方文档](https://github.com/anomalyco/opencode)安装命令行版本或![桌面版本](https://opencode.ai/download)的 OpenCode。支持macOS, Windows, Linux。
+
+GPT(CodeX) 和其他模型价格比例请参考 [模型与价格](/Aggregation/Model-Price)
+
+## 找到 OpenCode 配置文件
+
+**macOS / Linux:**
+`~/.config/opencode/opencode.json`
+
+**Windows:**
+`%APPDATA%\opencode\opencode.json`
+或者
+`<用户目录>\.config\opencode\opencode.json`
+
+## 配置 GPT / CodeX 系列模型
+
+参考下图修改`opencode.json`：
+
+![CodeX](/images/API/OpenCode/codex.png)
+
+修改 OpenAI provider：
+```json
+    "openai": {
+      "options": {
+        "baseURL": "https://cc.liaobots.work/codex/v1",
+        "apiKey": "您的登录码"
+      },
+    }
+```
+
+调整 opencode 的默认 GPT 模型选单为下图所示：
+
+![gpt-models](/images/API/OpenCode/gpt-models.png)
+
+## 配置 Claude 系列模型
+
+![Claude](/images/API/OpenCode/claude.png)
+
+添加自定义 Claude Provider：
+```json
+    "liao-claude": {
+      "name": "Liao Claude",
+      "npm": "@ai-sdk/anthropic",
+      "options": {
+        "baseURL": "https://ai.liaobots.work/v1",
+        "apiKey": "您的登录码"
+      },
+      "models": {
+        "claude-sonnet-4-5-20250929": {
+          "name": "Claude Sonnet 4.5"
+        },
+        "claude-opus-4-5-20251101": {
+          "name": "Claude Opus 4.5"
+        },
+        "claude-haiku-4-5-20251001": {
+          "name": "Claude Haiku 4.5"
+        },
+      }
+    }
+```
+
+## 配置 Gemini 系列模型
+
+![Gemini](/images/API/OpenCode/gemini.png)
+
+添加自定义 Provider：
+```json
+    "liao-gemini": {
+      "name": "Liao Gemini",
+      "npm": "@ai-sdk/google",
+      "options": {
+        "baseURL": "https://ai.liaobots.work/v1beta",
+        "apiKey": "您的登录码",
+      },
+      "models": {
+        "gemini-3-pro-preview": {
+          "name": "Gemini 3 Pro"
+        },
+        "gemini-3-flash-preview": {
+          "name": "Gemini 3 Flash"
+        },
+        "gemini-3-pro-preview-studio": {
+          "name": "Gemini 3 Pro Studio"
+        },
+      }
+    }
+```
+
+## 配置其他 OpenAI 格式兼容模型
+
+添加自定义 Provider：
+```json
+    "liao-xxx": {
+      "name": "Liao xxx",
+      "npm": "@ai-sdk/openai-compatible",
+      "options": {
+        "baseURL": "https://ai.liaobots.work/v1",
+        "apiKey": "您的登录码",
+      },
+      "models": {
+        "xxx": {
+          "name": "xxx"
+        }
+      }
+    }
+```
+
+
