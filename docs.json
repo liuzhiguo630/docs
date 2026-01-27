@@ -38,6 +38,7 @@
             "pages": [
               "API/en/CodeX",
               "API/en/ClaudeCode",
+              "API/en/OpenCode",
               "API/en/Dify",
               "API/en/Chatbox",
               "API/en/SillyTavern",
@@ -76,6 +77,7 @@
             "pages": [
               "API/cn/CodeX",
               "API/cn/ClaudeCode",
+              "API/cn/OpenCode",
               "API/cn/Dify",
               "API/cn/Chatbox",
               "API/cn/SillyTavern",
