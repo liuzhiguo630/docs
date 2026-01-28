@@ -39,12 +39,14 @@
               "API/en/CodeX",
               "API/en/ClaudeCode",
               "API/en/OpenCode",
+              "API/en/ClawdBot",
               "API/en/Dify",
               "API/en/Chatbox",
               "API/en/SillyTavern",
               "API/en/Cursor",
               "API/en/Cline",
-              "API/en/Omate"
+              "API/en/Omate",
+              "API/en/ImmersiveTranslation"
             ]
           }
         ]
@@ -78,12 +80,14 @@
               "API/cn/CodeX",
               "API/cn/ClaudeCode",
               "API/cn/OpenCode",
+              "API/cn/ClawdBot",
               "API/cn/Dify",
               "API/cn/Chatbox",
               "API/cn/SillyTavern",
               "API/cn/Cursor",
               "API/cn/Cline",
-              "API/cn/Omate"
+              "API/cn/Omate",
+              "API/cn/ImmersiveTranslation"
             ]
           }
         ]

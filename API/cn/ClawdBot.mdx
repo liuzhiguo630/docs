@@ -1,0 +1,254 @@
+---
+title: "接入 Moltbot(Clawdbot)"
+icon: "code"
+---
+
+![Clawd](/images/API/ClawdBot/clawd-bot-icon.png)
+
+## 准备工作
+
+参照[官方文档](https://docs.molt.bot/start/getting-started)安装 Moltbot（旧名 Clawdbot）。支持macOS, Windows (WSL2), Linux。
+
+文档全英文太难理解？使用 [Liao 接入沉浸式翻译](/API/cn/ImmersiveTranslation)
+
+各模型价格比例请参考 [模型与价格](/Aggregation/Model-Price)
+
+## 找到 Moltbot 配置文件
+
+**macOS / Linux / WSL2:**
+`~/.moltbot/moltbot.json` 或 `~/.clawdbot/clawdbot.json`
+
+## 修改配置文件中的 models 清单
+
+参考以下json可以完成 liao 提供的 claude 模型、GPT-CodeX 系列模型、Gemini 系列模型、其他模型的配置：
+
+```json
+  "models": {
+    "providers": {
+      "liao-claude": {
+        "baseUrl": "https://ai.liaobots.work/v1",
+        "apiKey": "您的登录码",
+        "api": "anthropic-messages",
+        "models": [
+          {
+            "id": "claude-sonnet-4-5-20250929",
+            "name": "Claude Sonnet 4.5",
+            "reasoning": true,
+            "input": [
+              "text",
+              "image"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 200000,
+            "maxTokens": 64000
+          },
+          {
+            "id": "claude-opus-4-5-20251101",
+            "name": "Claude Opus 4.5",
+            "reasoning": true,
+            "input": [
+              "text",
+              "image"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 200000,
+            "maxTokens": 64000
+          },
+          {
+            "id": "claude-haiku-4-5-20251001",
+            "name": "Claude Haiku 4.5",
+            "reasoning": true,
+            "input": [
+              "text",
+              "image"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 200000,
+            "maxTokens": 64000
+          }
+        ]
+      },
+      "liao-codex": {
+        "baseUrl": "https://cc.liaobots.work/codex/v1",
+        "apiKey": "您的登录码",
+        "api": "openai-responses",
+        "models": [
+          {
+            "id": "gpt-5.2-codex",
+            "name": "GPT-5.2-Codex",
+            "reasoning": true,
+            "input": [
+              "text",
+              "image"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 400000,
+            "maxTokens": 128000
+          },
+          {
+            "id": "gpt-5.2",
+            "name": "GPT-5.2",
+            "reasoning": false,
+            "input": [
+              "text",
+              "image"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 400000,
+            "maxTokens": 128000
+          },
+          {
+            "id": "gpt-5.1-codex",
+            "name": "GPT-5.1-Codex",
+            "reasoning": true,
+            "input": [
+              "text",
+              "image"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 1000000,
+            "maxTokens": 128000
+          }
+        ]
+      },
+      "liao-gemini": {
+        "baseUrl": "https://ai.liaobots.work/v1beta",
+        "apiKey": "您的登录码",
+        "api": "google-generative-ai",
+        "models": [
+          {
+            "id": "gemini-3-pro-preview",
+            "name": "Gemini 3 Pro Preview",
+            "reasoning": true,
+            "input": [
+              "text",
+              "image"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 1048576,
+            "maxTokens": 65536
+          },
+          {
+            "id": "gemini-3-flash-preview",
+            "name": "Gemini 3 Flash Preview",
+            "reasoning": true,
+            "input": [
+              "text",
+              "image"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 1048576,
+            "maxTokens": 65536
+          }
+        ]
+      },
+      "liao": {
+        "baseUrl": "https://ai.liaobots.work/v1",
+        "apiKey": "您的登录码",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "glm-4.7",
+            "name": "GLM-4.7",
+            "reasoning": true,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 200000,
+            "maxTokens": 128000
+          },
+          {
+            "id": "minimax-m2.1",
+            "name": "MiniMax M2.1",
+            "reasoning": true,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 197000,
+            "maxTokens": 131072
+          },
+          {
+            "id": "kimi-k2.5",
+            "name": "Kimi K2.5",
+            "reasoning": true,
+            "input": [
+              "text",
+              "image"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 262144,
+            "maxTokens": 262144
+          }
+        ]
+      }
+    }
+  },
+```
+
+## 在 Moltbot 中切换当前使用模型
+
+在上一步配置完成后，可使用以下命令格式切换模型（命令仅供参考，您只需要运行您需要的模型）：
+
+```shell
+moltbot models set liao/glm-4.7
+moltbot models set liao-claude/claude-sonnet-4-5-20250929
+moltbot models set liao-codex/gpt-5.2
+moltbot models set liao-gemini/gemini-3-pro-preview
+```
