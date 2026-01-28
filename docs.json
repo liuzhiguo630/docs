@@ -45,7 +45,6 @@
               "API/en/SillyTavern",
               "API/en/Cursor",
               "API/en/Cline",
-              "API/en/Omate",
               "API/en/ImmersiveTranslation"
             ]
           }
@@ -86,7 +85,6 @@
               "API/cn/SillyTavern",
               "API/cn/Cursor",
               "API/cn/Cline",
-              "API/cn/Omate",
               "API/cn/ImmersiveTranslation"
             ]
           }
