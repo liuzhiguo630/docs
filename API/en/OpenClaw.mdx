@@ -1,33 +1,30 @@
 ---
-title: "接入 Moltbot(Clawdbot)"
+title: "Integrate OpenClaw"
 icon: "code"
 ---
 
-![Clawd](/images/API/ClawdBot/clawd-bot-icon.png)
+![OpenClaw](/images/API/OpenClaw/openclaw-icon.png)
 
-## 准备工作
+## Prerequisites
 
-参照[官方文档](https://docs.molt.bot/start/getting-started)安装 Moltbot（旧名 Clawdbot）。支持macOS, Windows (WSL2), Linux。
+Follow the [official documentation](https://docs.openclaw.ai/install) to install OpenClaw (formerly Moltbot/Clawdbot). Supports macOS, Windows (WSL2), Linux.
 
-文档全英文太难理解？使用 [Liao 接入沉浸式翻译](/API/cn/ImmersiveTranslation)
+For price ratio, please refer to [Models & Pricing](/Aggregation/Model-Price)
 
-各模型价格比例请参考 [模型与价格](/Aggregation/Model-Price)
-
-## 找到 Moltbot 配置文件
+## Locate the OpenClaw Configuration File
 
 **macOS / Linux / WSL2:**
-`~/.moltbot/moltbot.json` 或 `~/.clawdbot/clawdbot.json`
+`~/.openclaw/openclaw.json` or `~/.moltbot/moltbot.json` or `~/.clawdbot/clawdbot.json`
+## Modify the models list in the configuration file
 
-## 修改配置文件中的 models 清单
-
-参考以下json可以完成 liao 提供的 claude 模型、GPT-CodeX 系列模型、Gemini 系列模型、其他模型的配置：
+Refer to the following JSON to configure models provided by liao: Claude models, GPT-CodeX series models, Gemini series models, and other models:
 
 ```json
   "models": {
     "providers": {
       "liao-claude": {
         "baseUrl": "https://ai.liaobots.work/",
-        "apiKey": "您的登录码",
+        "apiKey": "Your Authcode",
         "api": "anthropic-messages",
         "models": [
           {
@@ -85,7 +82,7 @@ icon: "code"
       },
       "liao-codex": {
         "baseUrl": "https://cc.liaobots.work/codex/v1",
-        "apiKey": "您的登录码",
+        "apiKey": "Your Authcode",
         "api": "openai-responses",
         "models": [
           {
@@ -143,7 +140,7 @@ icon: "code"
       },
       "liao-gemini": {
         "baseUrl": "https://ai.liaobots.work/v1beta",
-        "apiKey": "您的登录码",
+        "apiKey": "Your Authcode",
         "api": "google-generative-ai",
         "models": [
           {
@@ -184,7 +181,7 @@ icon: "code"
       },
       "liao": {
         "baseUrl": "https://ai.liaobots.work/v1",
-        "apiKey": "您的登录码",
+        "apiKey": "Your Authcode",
         "api": "openai-completions",
         "models": [
           {
@@ -242,13 +239,13 @@ icon: "code"
   },
 ```
 
-## 在 Moltbot 中切换当前使用模型
+## Switch the Currently Used Model in OpenClaw
 
-在上一步配置完成后，可使用以下命令格式切换模型（命令仅供参考，您只需要运行您需要的模型）：
+After completing the configuration in the previous step, you can use the following command format to switch models (the commands are for reference only, you only need to run the model you require):
 
 ```shell
-moltbot models set liao/glm-4.7
-moltbot models set liao-claude/claude-sonnet-4-5-20250929
-moltbot models set liao-codex/gpt-5.2
-moltbot models set liao-gemini/gemini-3-pro-preview
+openclaw models set liao/glm-4.7
+openclaw models set liao-claude/claude-sonnet-4-5-20250929
+openclaw models set liao-codex/gpt-5.2
+openclaw models set liao-gemini/gemini-3-pro-preview
 ```
