@@ -24,172 +24,57 @@ icon: "code"
 
 ```json
   "models": {
+    "mode": "merge",
     "providers": {
       "liao-claude": {
+        "baseUrl": "https://ai.liaobots.work",
+        "apiKey": "您的登录码",
+        "api": "anthropic-messages",
+        "models": [
+          {
+            "id": "claude-sonnet-4-6",
+            "name": "Claude Sonnet 4.6",
+            "reasoning": true,
+            "input": [
+              "text",
+              "image"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 200000,
+            "maxTokens": 64000
+          },
+          {
+            "id": "claude-opus-4-6",
+            "name": "Claude Opus 4.6",
+            "reasoning": true,
+            "input": [
+              "text",
+              "image"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 200000,
+            "maxTokens": 64000
+          }
+        ]
+      },
+      "liao": {
         "baseUrl": "https://ai.liaobots.work/",
         "apiKey": "您的登录码",
         "api": "anthropic-messages",
         "models": [
           {
-            "id": "claude-sonnet-4-5-20250929",
-            "name": "Claude Sonnet 4.5",
-            "reasoning": true,
-            "input": [
-              "text",
-              "image"
-            ],
-            "cost": {
-              "input": 0,
-              "output": 0,
-              "cacheRead": 0,
-              "cacheWrite": 0
-            },
-            "contextWindow": 200000,
-            "maxTokens": 64000
-          },
-          {
-            "id": "claude-opus-4-5-20251101",
-            "name": "Claude Opus 4.5",
-            "reasoning": true,
-            "input": [
-              "text",
-              "image"
-            ],
-            "cost": {
-              "input": 0,
-              "output": 0,
-              "cacheRead": 0,
-              "cacheWrite": 0
-            },
-            "contextWindow": 200000,
-            "maxTokens": 64000
-          },
-          {
-            "id": "claude-haiku-4-5-20251001",
-            "name": "Claude Haiku 4.5",
-            "reasoning": true,
-            "input": [
-              "text",
-              "image"
-            ],
-            "cost": {
-              "input": 0,
-              "output": 0,
-              "cacheRead": 0,
-              "cacheWrite": 0
-            },
-            "contextWindow": 200000,
-            "maxTokens": 64000
-          }
-        ]
-      },
-      "liao-codex": {
-        "baseUrl": "https://cc.liaobots.work/codex/v1",
-        "apiKey": "您的登录码",
-        "api": "openai-responses",
-        "models": [
-          {
-            "id": "gpt-5.2-codex",
-            "name": "GPT-5.2-Codex",
-            "reasoning": true,
-            "input": [
-              "text",
-              "image"
-            ],
-            "cost": {
-              "input": 0,
-              "output": 0,
-              "cacheRead": 0,
-              "cacheWrite": 0
-            },
-            "contextWindow": 400000,
-            "maxTokens": 128000
-          },
-          {
-            "id": "gpt-5.2",
-            "name": "GPT-5.2",
-            "reasoning": false,
-            "input": [
-              "text",
-              "image"
-            ],
-            "cost": {
-              "input": 0,
-              "output": 0,
-              "cacheRead": 0,
-              "cacheWrite": 0
-            },
-            "contextWindow": 400000,
-            "maxTokens": 128000
-          },
-          {
-            "id": "gpt-5.1-codex",
-            "name": "GPT-5.1-Codex",
-            "reasoning": true,
-            "input": [
-              "text",
-              "image"
-            ],
-            "cost": {
-              "input": 0,
-              "output": 0,
-              "cacheRead": 0,
-              "cacheWrite": 0
-            },
-            "contextWindow": 1000000,
-            "maxTokens": 128000
-          }
-        ]
-      },
-      "liao-gemini": {
-        "baseUrl": "https://ai.liaobots.work/v1beta",
-        "apiKey": "您的登录码",
-        "api": "google-generative-ai",
-        "models": [
-          {
-            "id": "gemini-3-pro-preview",
-            "name": "Gemini 3 Pro Preview",
-            "reasoning": true,
-            "input": [
-              "text",
-              "image"
-            ],
-            "cost": {
-              "input": 0,
-              "output": 0,
-              "cacheRead": 0,
-              "cacheWrite": 0
-            },
-            "contextWindow": 1048576,
-            "maxTokens": 65536
-          },
-          {
-            "id": "gemini-3-flash-preview",
-            "name": "Gemini 3 Flash Preview",
-            "reasoning": true,
-            "input": [
-              "text",
-              "image"
-            ],
-            "cost": {
-              "input": 0,
-              "output": 0,
-              "cacheRead": 0,
-              "cacheWrite": 0
-            },
-            "contextWindow": 1048576,
-            "maxTokens": 65536
-          }
-        ]
-      },
-      "liao": {
-        "baseUrl": "https://ai.liaobots.work/v1",
-        "apiKey": "您的登录码",
-        "api": "openai-completions",
-        "models": [
-          {
-            "id": "glm-4.7",
-            "name": "GLM-4.7",
+            "id": "minimax-m2.5",
+            "name": "MiniMax M2.5",
             "reasoning": true,
             "input": [
               "text"
@@ -200,23 +85,7 @@ icon: "code"
               "cacheRead": 0,
               "cacheWrite": 0
             },
-            "contextWindow": 200000,
-            "maxTokens": 128000
-          },
-          {
-            "id": "minimax-m2.1",
-            "name": "MiniMax M2.1",
-            "reasoning": true,
-            "input": [
-              "text"
-            ],
-            "cost": {
-              "input": 0,
-              "output": 0,
-              "cacheRead": 0,
-              "cacheWrite": 0
-            },
-            "contextWindow": 197000,
+            "contextWindow": 204800,
             "maxTokens": 131072
           },
           {
@@ -233,8 +102,8 @@ icon: "code"
               "cacheRead": 0,
               "cacheWrite": 0
             },
-            "contextWindow": 262144,
-            "maxTokens": 262144
+            "contextWindow": 204800,
+            "maxTokens": 131072
           }
         ]
       }
@@ -247,8 +116,7 @@ icon: "code"
 在上一步配置完成后，可使用以下命令格式切换模型（命令仅供参考，您只需要运行您需要的模型）：
 
 ```shell
-openclaw models set liao/glm-4.7
-openclaw models set liao-claude/claude-sonnet-4-5-20250929
-openclaw models set liao-codex/gpt-5.2
-openclaw models set liao-gemini/gemini-3-pro-preview
+openclaw models set liao-claude/claude-sonnet-4-6
+openclaw models set liao/minimax-m2.5
+openclaw models set liao/kimi-k2.5
 ```
