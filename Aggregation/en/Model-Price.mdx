@@ -61,7 +61,6 @@ curl --location 'https://ai.liaobots.work/v1/chat/completions' \
 
 | Provider  | Model Name                      | Context | Point Price              | Price Ratio | Official Price (USD)     |
 | --------- | ------------------------------- | ------- | ------------------------ | ----------- | ------------------------ |
-| Anthropic | claude-sonnet-5 | 200.0K | Input 0.024, Output 0.12 | 109% | Input 0.003, Output 0.015 |
 | Anthropic | claude-sonnet-4-6 | 200.0K | Input 0.003, Output 0.015 | 27% | Input 0.0015, Output 0.0075 |
 | Anthropic | claude-sonnet-4-5-20250929-thinking | 200.0K | Input 0.003, Output 0.015 | 27% | Input 0.0015, Output 0.0075 |
 | Anthropic | claude-sonnet-4-5-20250929-t | 200.0K | Input 0.003, Output 0.015 | 27% | Input 0.0015, Output 0.0075 |
@@ -78,20 +77,7 @@ curl --location 'https://ai.liaobots.work/v1/chat/completions' \
 | Anthropic | claude-opus-4-1-20250805 | 200.0K | Input 0.03, Output 0.15 | 27% | Input 0.015, Output 0.075 |
 | Anthropic | claude-opus-4-20250514-thinking | 200.0K | Input 0.135, Output 0.675 | 123% | Input 0.015, Output 0.075 |
 | Anthropic | claude-opus-4-20250514 | 200.0K | Input 0.03, Output 0.15 | 27% | Input 0.015, Output 0.075 |
-| Anthropic | claude-3-7-sonnet-20250219-thinking | 200.0K | Input 0.024, Output 0.12 | 109% | Input 0.003, Output 0.015 |
-| Anthropic | claude-3-7-sonnet-20250219-t | 200.0K | Input 0.009, Output 0.045 | 41% | Input 0.003, Output 0.015 |
-| Anthropic | claude-3-7-sonnet-20250219 | 200.0K | Input 0.024, Output 0.12 | 109% | Input 0.003, Output 0.015 |
-| Anthropic | claude-3-5-sonnet-20241022-t | 200.0K | Input 0.003, Output 0.015 | 13% | Input 0.003, Output 0.015 |
-| Anthropic | claude-3-5-sonnet-20241022 | 200.0K | Input 0.027, Output 0.135 | 123% | Input 0.003, Output 0.015 |
-| Anthropic | claude-3-5-sonnet-latest | 200.0K | Input 0.0165, Output 0.0825 | 75% | Input 0.003, Output 0.015 |
-| Anthropic | claude-3-5-sonnet-20240620 | 200.0K | Input 0.027, Output 0.135 | 123% | Input 0.003, Output 0.015 |
 | Anthropic | claude-3-5-haiku-20241022 | 200.0K | Input 0.004, Output 0.02 | 54% | Input 0.001, Output 0.005 |
-| Anthropic | claude-3-haiku-20240307 | 200.0K | Input 0.0075, Output 0.0375 | 102% | Input 0.001, Output 0.005 |
-| Anthropic | claude-3-sonnet-20240229 | 200.0K | Input 0.012, Output 0.06 | 54% | Input 0.003, Output 0.015 |
-| Anthropic | claude-3-opus-20240229 | 200.0K | Input 0.135, Output 0.675 | 123% | Input 0.015, Output 0.075 |
-| Anthropic | claude-2.1 | 200.0K | Input 0.06, Output 0.18 | 102% | Input 0.008, Output 0.024 |
-| Anthropic | claude-2.0 | 200.0K | Input 0.06, Output 0.18 | 102% | Input 0.008, Output 0.024 |
-| Anthropic | claude-2 | 200.0K | Input 0.06, Output 0.18 | 102% | Input 0.008, Output 0.024 |
 | DeepSeek | deepseek-v3.2-thinking | 128.0K | Input 0.0011, Output 0.0016 | 52% | Input 0.00028, Output 0.00042 |
 | DeepSeek | deepseek-v3.2-exp | 128.0K | Input 0.0011, Output 0.0016 | 52% | Input 0.00028, Output 0.00042 |
 | DeepSeek | deepseek-v3.2 | 128.0K | Input 0.0011, Output 0.0016 | 52% | Input 0.00028, Output 0.00042 |
@@ -102,6 +88,7 @@ curl --location 'https://ai.liaobots.work/v1/chat/completions' \
 | DeepSeek | deepseek-r1-0528 | 128.0K | Input 0.00231, Output 0.0092 | 57% | Input 0.00055, Output 0.00219 |
 | DeepSeek | deepseek-r1 | 128.0K | Input 0.00231, Output 0.0092 | 57% | Input 0.00055, Output 0.00219 |
 | GLM | glm-4.7 | 192.0K | Input 0.0011, Output 0.00438 | 27% | Input 0.00055, Output 0.00219 |
+| Google | gemini-3.1-flash-image-preview | 200.0K | Input 0.1, Output 0.1 | 6% | Input 0.2, Output 0.2 |
 | Google | gemini-3-pro-image-preview-openrouter | 256.0K | Input 0.2, Output 0.2 | 6% | Input 0.4, Output 0.4 |
 | Google | gemini-3-pro-image-preview | 256.0K | Input 0.2, Output 0.2 | 6% | Input 0.4, Output 0.4 |
 | Google | gemini-2.5-flash-image | 32.0K | Input 0.1, Output 0.1 | 6% | Input 0.2, Output 0.2 |
@@ -111,6 +98,8 @@ curl --location 'https://ai.liaobots.work/v1/chat/completions' \
 | Google | gemini-exp-1121 | 1024.0K | Input 0.003, Output 0.012 | 32% | Input 0.005, Output 0.005 |
 | Google | gemini-exp-1114 | 1024.0K | Input 0.003, Output 0.012 | 32% | Input 0.005, Output 0.005 |
 | Google | gemini-3.1-pro-preview-studio | 1000.0K | Input 0.001, Output 0.008 | 10% | Input 0.00125, Output 0.01 |
+| Google | gemini-3.1-pro-preview | 1000.0K | Input 0.0024, Output 0.0144 | 16% | Input 0.002, Output 0.012 |
+| Google | gemini-3.1-flash-lite-preview | 1000.0K | Input 0.0003, Output 0.0018 | 16% | Input 0.00025, Output 0.0015 |
 | Google | gemini-3-pro-preview-thinking | 1000.0K | Input 0.0024, Output 0.0144 | 16% | Input 0.002, Output 0.012 |
 | Google | gemini-3-pro-preview-studio | 1000.0K | Input 0.001, Output 0.008 | 10% | Input 0.00125, Output 0.01 |
 | Google | gemini-3-pro-preview-nothinking | 1000.0K | Input 0.002, Output 0.012 | 13% | Input 0.002, Output 0.012 |
@@ -146,8 +135,8 @@ curl --location 'https://ai.liaobots.work/v1/chat/completions' \
 | OpenAI | reverse-gpt-4o-free | 8.0K | Input 0.001, Output 0.001 | 13% | Input 0.001, Output 0.001 |
 | OpenAI | o4-mini | 128.0K | Input 0.0011, Output 0.0044 | 13% | Input 0.0011, Output 0.0044 |
 | OpenAI | o3-mini-high | 128.0K | Input 0.0011, Output 0.0044 | 13% | Input 0.0011, Output 0.0044 |
-| OpenAI | o3-mini | 128.0K | Input 0.0011, Output 0.0044 | 13% | Input 0.0011, Output 0.0044 |
 | OpenAI | o3-mini-2025-01-31 | 128.0K | Input 0.0011, Output 0.0044 | 13% | Input 0.0011, Output 0.0044 |
+| OpenAI | o3-mini | 128.0K | Input 0.0011, Output 0.0044 | 13% | Input 0.0011, Output 0.0044 |
 | OpenAI | o3-2025-04-16 | 128.0K | Input 0.004, Output 0.016 | 27% | Input 0.002, Output 0.008 |
 | OpenAI | o3 | 128.0K | Input 0.004, Output 0.016 | 27% | Input 0.002, Output 0.008 |
 | OpenAI | o1-preview-2024-09-12 | 128.0K | Input 0.045, Output 0.18 | 41% | Input 0.015, Output 0.06 |
@@ -155,6 +144,7 @@ curl --location 'https://ai.liaobots.work/v1/chat/completions' \
 | OpenAI | o1-2024-12-17 | 128.0K | Input 0.015, Output 0.06 | 13% | Input 0.015, Output 0.06 |
 | OpenAI | horizon-beta | 256.0K | Input 0.01, Output 0.01 | 1% | Input 0.1, Output 0.1 |
 | OpenAI | gpt-oss-120b | 128.0K | Input 0.00015, Output 0.0006 | 13% | Input 0.00015, Output 0.0006 |
+| OpenAI | gpt-5.4 | 270.0K | Input 0.005, Output 0.03 | 27% | Input 0.0025, Output 0.015 |
 | OpenAI | gpt-5.2 | 1000.0K | Input 0.0035, Output 0.028 | 27% | Input 0.00175, Output 0.014 |
 | OpenAI | gpt-5.1-medium | 1000.0K | Input 0.004, Output 0.016 | 27% | Input 0.002, Output 0.008 |
 | OpenAI | gpt-5-codex | 1000.0K | Input 0.0025, Output 0.02 | 27% | Input 0.00125, Output 0.01 |
