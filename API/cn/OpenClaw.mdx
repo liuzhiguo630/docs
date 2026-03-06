@@ -67,6 +67,29 @@ icon: "code"
           }
         ]
       },
+      "liao-codex": {
+        "baseUrl": "https://ai.liaobots.work/v1",
+        "apiKey": "您的登录码",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "gpt-5.3-codex",
+            "name": "GPT 5.3 Codex",
+            "reasoning": true,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 200000,
+            "maxTokens": 64000
+          }
+        ]
+      },
       "liao": {
         "baseUrl": "https://ai.liaobots.work/",
         "apiKey": "您的登录码",
@@ -119,4 +142,7 @@ icon: "code"
 openclaw models set liao-claude/claude-sonnet-4-6
 openclaw models set liao/minimax-m2.5
 openclaw models set liao/kimi-k2.5
+openclaw models set liao-codex/gpt-5.3-codex
 ```
+
+注意：如果您修改了baseUrl，可能需要重写provider名称才能起效。重启网关和重新加载设置文件可能无效。
